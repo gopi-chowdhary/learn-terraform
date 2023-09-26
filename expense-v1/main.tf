@@ -13,7 +13,7 @@ resource "aws_route53_record" "frontend" {
   name    = "frontend.vdevops69.online"
   type    = "A"
   ttl     = 30
-  records = [ aws_instance.web.private_ip ]
+  records = [ aws_instance.frontend.private_ip ]
 }
 
 resource "aws_instance" "backend" {
