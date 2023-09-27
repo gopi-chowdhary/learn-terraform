@@ -18,6 +18,6 @@ output "fruit" {
 }
 
 output "first_fruit" {
-  value = var.fruits[0]
+  value = var.fruits[1]
 }
 
