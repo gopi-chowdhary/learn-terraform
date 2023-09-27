@@ -9,7 +9,7 @@ resource "aws_instance" "frontend" {
 }
 
 resource "aws_route53_record" "frontend" {
-  zone_id = "Z0315396BBDPQ9L5HOV7"
+  zone_id = "data.aws_route53_zone.zone.zone_id"
   name    = "frontend.vdevops69.online"
   type    = "A"
   ttl     = 30
@@ -27,7 +27,7 @@ resource "aws_instance" "backend" {
 }
 
 resource "aws_route53_record" "backend" {
-  zone_id = "Z0315396BBDPQ9L5HOV7"
+  zone_id = "data.aws_route53_zone.zone.zone_id"
   name    = "backend.vdevops69.online"
   type    = "A"
   ttl     = 30
@@ -45,7 +45,7 @@ resource "aws_instance" "mysql" {
 }
 
 resource "aws_route53_record" "mysql" {
-  zone_id = "Z0315396BBDPQ9L5HOV7"
+  zone_id = "data.aws_route53_zone.zone.zone_id"
   name    = "mysql.vdevops69.online"
   type    = "A"
   ttl     = 30
